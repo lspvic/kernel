@@ -18,6 +18,7 @@ on:
         options:
           - unifreq
           - lspvic
+          - lspvic/linux-amlogic-sc2@sc2
           - hkallweit/linux-amlogic-sc2@sc2
       kernel_version:
         description: "Select kernel version"
