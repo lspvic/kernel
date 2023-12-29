@@ -68,6 +68,7 @@ on:
         type: choice
         options:
           - kernel-config/release/general
+          - kernel-config/release/sc2
           - false
 
 env:
