@@ -20,6 +20,7 @@ on:
           - lspvic
           - lspvic/linux-amlogic-sc2@sc2
           - hkallweit/linux-amlogic-sc2@sc2
+          - sib0ndt/linux-6.6.6@main
       kernel_version:
         description: "Select kernel version"
         required: false
@@ -33,6 +34,7 @@ on:
           - 5.15.1
           - 6.1.1
           - 5.18.0
+          - 6.6.6
       kernel_auto:
         description: "Auto use the latest kernel"
         required: false
@@ -70,7 +72,7 @@ on:
         options:
           - kernel-config/release/general
           - kernel-config/release/sc2
-          - false
+          - "false"
 
 env:
   TZ: America/New_York
