@@ -24,6 +24,7 @@ on:
           - lspvic/linux-6.6.6@main
           - CoreELEC/linux-amlogic@amlogic-5.4.210
           - lspvic/linux-amlogic@amlogic-5.4.210
+          - lspvic/linux-6.1.y@sc2-triage
       kernel_version:
         description: "Select kernel version"
         required: false
