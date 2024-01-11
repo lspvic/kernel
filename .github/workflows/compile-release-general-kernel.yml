@@ -21,8 +21,9 @@ on:
           - lspvic/linux-amlogic-sc2@sc2
           - hkallweit/linux-amlogic-sc2@sc2
           - sib0ndt/linux-6.6.6@main
-          - CoreELEC/linux-amlogic@amlogic-5.4.210
           - lspvic/linux-6.6.6@main
+          - CoreELEC/linux-amlogic@amlogic-5.4.210
+          - lspvic/linux-amlogic@amlogic-5.4.210
       kernel_version:
         description: "Select kernel version"
         required: false
