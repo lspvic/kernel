@@ -25,6 +25,7 @@ on:
           - CoreELEC/linux-amlogic@amlogic-5.4.210
           - lspvic/linux-amlogic@amlogic-5.4.210
           - lspvic/linux-6.1.y@sc2-triage
+          - chewitt/linux@amlogic-6.7.y
       kernel_version:
         description: "Select kernel version"
         required: false
@@ -40,6 +41,7 @@ on:
           - 5.18.0
           - 6.6.6
           - 5.4.210
+          - 6.7.0
       kernel_auto:
         description: "Auto use the latest kernel"
         required: false
@@ -77,6 +79,22 @@ on:
         options:
           - kernel-config/release/general
           - kernel-config/release/sc2
+          - "false"
+      kernel_patch:
+        description: "Set the directory for kernel patches"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - kernel-patch/sc2
+          - "false"
+      auto_patch:
+        description: "Set whether to use kernel patches"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "true"
           - "false"
 
 env:
@@ -121,6 +139,8 @@ jobs:
           kernel_toolchain: ${{ inputs.kernel_toolchain }}
           kernel_sign: ${{ inputs.kernel_sign }}
           kernel_config: ${{ inputs.kernel_config }}
+          kernel_patch: ${{ inputs.kernel_patch }}
+          auto_patch: ${{ inputs.auto_patch }}
 
       - name: Upload Kernel to Release
         uses: ncipollo/release-action@main
