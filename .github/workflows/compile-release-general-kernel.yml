@@ -26,6 +26,7 @@ on:
           - lspvic/linux-amlogic@amlogic-5.4.210
           - lspvic/linux-6.1.y@sc2-triage
           - chewitt/linux@amlogic-6.7.y
+          - lspvic/linux@amlogic-6.7.y-sc2
       kernel_version:
         description: "Select kernel version"
         required: false
